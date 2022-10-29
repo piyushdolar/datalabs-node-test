@@ -97,10 +97,9 @@ const delay = async ({ transName, ms }) => {
 }
 
 // NOTE: solve this problem here
-const pleaseCodingHereFn = async () => {
+const pleaseCodingHereFn = async (resolve) => {
 	const client = new Client('postgresql://postgres:root@localhost:5432/eatlab_test')
 	await client.connect()
 	await client.query('UPDATE point SET amount = 16 WHERE member_id = 2')
 	await client.end()
-
 }
